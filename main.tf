@@ -14,7 +14,7 @@ resource "aws_subnet" "main_subnet" {
 
 resource "aws_instance" "web" {
   ami           = "ami-020cba7c55df1f615" # Update with latest Amazon Linux AMI
-  instance_type = "t2.micro"
+  instance_type = "t2.medium"
   subnet_id     = aws_subnet.main_subnet.id
   key_name      = "terra-test-unni"
 
